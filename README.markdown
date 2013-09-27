@@ -1,4 +1,4 @@
-# will_paginate-foundation
+# (Under development) will_paginate-foundation
 
 
 This gem integrates the [Foundation](http://foundation.zurb.com) [pagination component](http://foundation.zurb.com/docs/components/pagination.html) with the [will_paginate](https://github.com/mislav/will_paginate) pagination gem.
