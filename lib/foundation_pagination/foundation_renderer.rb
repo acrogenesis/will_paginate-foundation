@@ -3,7 +3,6 @@ require "foundation_pagination/version"
 module FoundationPagination
   # Contains functionality shared by all renderer classes.
   module FoundationRenderer
-    ELLIPSIS = "&hellip;"
 
     def to_html
       list_items = pagination.map do |item|
@@ -37,7 +36,7 @@ module FoundationPagination
     end
 
     def gap
-      tag :li, link("ELLIPSIS", '#'), :class => 'unavailable'
+      tag :li, link('&hellip;', '#'), :class => 'unavailable'
     end
 
 #    def previous_page
