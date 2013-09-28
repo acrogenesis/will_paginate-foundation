@@ -1,6 +1,7 @@
 # will_paginate-foundation
 
 ![Foundation Pagination Component](https://raw.github.com/acrogenesis/will_paginate-foundation/master/pagination.png)
+
 This gem integrates the [Foundation](http://foundation.zurb.com) [pagination component](http://foundation.zurb.com/docs/components/pagination.html) with the [will_paginate](https://github.com/mislav/will_paginate) pagination gem.
 
 ## Install
