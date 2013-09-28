@@ -19,3 +19,17 @@ This gem integrates the [Foundation](http://foundation.zurb.com) [pagination com
 ```ruby
 <%= will_paginate @collection, renderer: FoundationPagination::Rails %>
 ```
+
+Contributing
+------------
+
+1. Fork it.
+2. Create a branch (`git checkout -b my_markup`)
+3. Commit your changes (`git commit -am "Cool new feature"`)
+4. Push to the branch (`git push origin my_markup`)
+5. Open a [Pull Request][1]
+6. Enjoy a refreshing 'Insert Favorite Beverage' and wait
+
+License
+------------
+The MIT License (MIT)
