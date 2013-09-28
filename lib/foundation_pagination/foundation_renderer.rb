@@ -21,6 +21,9 @@ module FoundationPagination
         html_container(tag("ul", list_items))
       end
     end
+    def html_container(html)
+      tag(:ul, html, container_attributes) 
+    end
 
     def container_attributes
       super.except(*[:link_options])
@@ -34,7 +37,7 @@ module FoundationPagination
     end
 
     def gap
-      tag :li, link('ELLIPSIS', '#'), :class => 'unavailable'
+      tag :li, link("ELLIPSIS", '#'), :class => 'unavailable'
     end
 
 #    def previous_page
