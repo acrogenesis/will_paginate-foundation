@@ -20,6 +20,17 @@ This gem integrates the [Foundation](http://foundation.zurb.com) [pagination com
 <%= will_paginate @collection, renderer: FoundationPagination::Rails %>
 ```
 
+### Sinatra
+
+  1. Load the Foundation CSS in your template.
+  2. `require "will_paginate-foundation"` in your Sinatra app.
+  3. In your view, use the `renderer: FoundationPagination::Sinatra` option with the `will_paginate` helper, for example:
+
+```ruby
+<%= will_paginate @collection, renderer: FoundationPagination::Sinatra %>
+```
+
+
 Contributing
 ------------
 
