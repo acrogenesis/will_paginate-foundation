@@ -43,6 +43,10 @@ Contributing
 5. Open a [Pull Request][1]
 6. Enjoy a refreshing 'Insert Favorite Beverage' and wait
 
+### Special Thanks
+
+This gem code was based on https://github.com/nickpad/will_paginate-bootstrap
+
 License
 ------------
 The MIT License (MIT)
