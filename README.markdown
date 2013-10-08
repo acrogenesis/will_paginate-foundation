@@ -1,5 +1,7 @@
 # will_paginate-foundation
 
+[![Gem Version](https://badge.fury.io/rb/will_paginate-foundation.png)](http://badge.fury.io/rb/will_paginate-foundation)
+
 ![Foundation Pagination Component](https://raw.github.com/acrogenesis/will_paginate-foundation/master/pagination.png)
 
 This gem integrates the [Foundation](http://foundation.zurb.com) [pagination component](http://foundation.zurb.com/docs/components/pagination.html) with the [will_paginate](https://github.com/mislav/will_paginate) pagination gem.
@@ -41,6 +43,14 @@ Contributing
 5. Open a [Pull Request][1]
 6. Enjoy a refreshing 'Insert Favorite Beverage' and wait
 
+### Special Thanks
+
+This gem code was based on https://github.com/nickpad/will_paginate-bootstrap
+
 License
 ------------
 The MIT License (MIT)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/acrogenesis/will_paginate-foundation/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
