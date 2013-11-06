@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.email       = ["adrian.rangel@gmail.com"]
   s.homepage    = "https://github.com/acrogenesis/will_paginate-foundation"
   s.summary     = %q{Integrates the Foundation pagination component with will_paginate}
-  s.description = %q{This gem integrates the Foundation pagination component with the will_paginate pagination gem. Supports Rails}
+  s.description = %q{This gem integrates the Foundation pagination component with the will_paginate pagination gem. Supports Rails and Sinatra}
   s.license     = "MIT"
 
   s.rubyforge_project = "will_paginate-foundation"
