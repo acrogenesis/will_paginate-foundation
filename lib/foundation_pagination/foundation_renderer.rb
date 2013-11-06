@@ -15,7 +15,7 @@ module FoundationPagination
       end.join(@options[:link_separator])
 
       if @options[:foundation].to_i >= 3
-        tag("ul", list_items, class: "pagination #{@options[:class]}")
+        tag("ul", list_items, :class => "pagination #{@options[:class]}")
       else
         html_container(tag("ul", list_items))
       end
@@ -32,7 +32,7 @@ module FoundationPagination
 
     def page_number(page)
       link_options = @options[:link_options] || {}
-      tag :li, link(page, page, link_options.merge(rel: rel_value(page))), :class => ('current' if page == current_page)
+      tag :li, link(page, page, link_options.merge(:rel => rel_value(page))), :class => ('current' if page == current_page)
     end
 
     def gap
