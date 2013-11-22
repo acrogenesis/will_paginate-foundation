@@ -52,7 +52,6 @@ module FoundationPagination
     def previous_or_next_page(page, text, classname)
       link_options = @options[:link_options] || {}
       tag :li, link(text, page || '#', link_options), :class => [classname[0..3], classname, ('unavailable' unless page)].join(' ')
-      
     end
   end
 end
