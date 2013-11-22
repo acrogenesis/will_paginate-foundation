@@ -14,14 +14,7 @@ module FoundationPagination
         end
       end.join(@options[:link_separator])
 
-      if @options[:foundation].to_i >= 3
-        tag("ul", list_items, :class => "pagination #{@options[:class]}")
-      else
-        html_container(tag("ul", list_items))
-      end
-    end
-    def html_container(html)
-      tag(:ul, html, container_attributes) 
+      tag("ul", list_items, :class => "pagination #{@options[:class]}")
     end
 
     def container_attributes
@@ -32,26 +25,36 @@ module FoundationPagination
 
     def page_number(page)
       link_options = @options[:link_options] || {}
-      tag :li, link(page, page, link_options.merge(:rel => rel_value(page))), :class => ('current' if page == current_page)
+
+      if page == current_page
+        tag :li, link(page, ""), :class => ('current')
+      else
+        tag :li, link(page, page, link_options.merge(:rel => rel_value(page)))
+      end
     end
-
-    def gap
-      tag :li, link('&hellip;', '#'), :class => 'unavailable'
-    end
-
-#    def previous_page
-#      num = @collection.current_page > 1 && @collection.current_page - 1
-#      previous_or_next_page(num, @options[:previous_label], "prev")
-#    end
-
-#    def next_page
-#      num = @collection.current_page < @collection.total_pages && @collection.current_page + 1
-#      previous_or_next_page(num, @options[:next_label], "next")
-#    end
 
     def previous_or_next_page(page, text, classname)
       link_options = @options[:link_options] || {}
-      tag :li, link(text, page || '#', link_options), :class => [classname[0..3], classname, ('unavailable' unless page)].join(' ')
+      if page
+        tag :li, link(text, page, link_options), :class => classname
+      else
+        tag :li, link(text, ""), :class => "%s unavailable" % classname
+      end
     end
+
+    def gap
+      tag :li, link('&hellip;', ''), :class => 'unavailable'
+    end
+
+    def previous_page
+      num = @collection.current_page > 1 && @collection.current_page - 1
+      previous_or_next_page(num, @options[:previous_label], "arrow")
+    end
+
+    def next_page
+      num = @collection.current_page < @collection.total_pages && @collection.current_page + 1
+      previous_or_next_page(num, @options[:next_label], "arrow")
+    end
+
   end
 end
