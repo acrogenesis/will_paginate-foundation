@@ -6,9 +6,10 @@ $template = <<EOHTML
 <html>
 <head>
 <title>will_paginate-foundation Example App</title>
-<link href="http://cdn.jsdelivr.net/foundation/4.3.2/css/foundation.min.css" rel="stylesheet">
+<link href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/css/foundation.min.css" rel="stylesheet">
 </head>
 <body>
+</br>
 <%= will_paginate @collection, renderer: FoundationPagination::Sinatra %>
 </body>
 </html>
