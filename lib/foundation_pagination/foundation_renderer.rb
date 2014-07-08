@@ -43,7 +43,7 @@ module FoundationPagination
     end
 
     def gap
-      tag :li, link('&hellip;', ''), :class => 'unavailable'
+      tag :li, tag('span','&hellip;'), :class => 'unavailable'
     end
 
     def previous_page
