@@ -1,3 +1,3 @@
 module FoundationPagination
-  VERSION = "5.3.3"
+  VERSION = '6.2.0'
 end
