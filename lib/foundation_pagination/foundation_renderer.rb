@@ -6,12 +6,7 @@ module FoundationPagination
 
     def to_html
       list_items = pagination.map do |item|
-        case item
-          when Fixnum
-            page_number(item)
-          else
-            send(item)
-        end
+        item.is_a?(Integer) ? page_number(item) : send(item)
       end.join(@options[:link_separator])
 
       tag("ul", list_items, :class => "pagination #{@options[:class]}")
